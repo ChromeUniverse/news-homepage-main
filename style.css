@@ -49,6 +49,7 @@ body {
 }
 
 .nav-link {
+  transition: all 150ms ease-in-out;
   text-decoration: none;
 }
 
@@ -104,6 +105,10 @@ body {
   line-height: 25px;
 }
 
+.hero-description-link {
+  transition: all 150ms ease-in-out;
+}
+
 .hero-description-link:link, .hero-description-link:visited {
   width: 190px;
   background-color: var(--soft-red);
@@ -147,13 +152,14 @@ body {
 }
 
 .new-article-link {
-  text-decoration: none;
+  text-decoration: none;  
 }
 
 .new-article-title {
   padding-bottom: 12px;
   font-size: 22px;
   color: var(--off-white);
+  transition: all 150ms ease-in-out;
 }
 
 .new-article-link:hover > .new-article-title {
@@ -212,9 +218,10 @@ body {
 }
 
 .list-article-title {
-  color: var(--very-dark-blue);
   font-weight: 700;
   font-size: 20px;
+  color: var(--very-dark-blue);
+  transition: all 150ms ease-in-out;
 }
 
 .list-article-link:hover > .list-article-title {
@@ -264,6 +271,7 @@ body {
 
   .cover.hidden {
     background-color: rgb(0, 0, 0, 0);
+    z-index: -10;
   }
 
   .nav-links-mobile {
@@ -285,6 +293,11 @@ body {
   .nav-links-mobile > .nav-link {
     font-weight: 400;
     color: var(--very-dark-blue);
+    transition: all 150ms ease-in-out;
+  }
+
+  .nav-links-mobile > .nav-link:hover {
+    color: var(--soft-red);
   }
 
   .nav-links-mobile.hidden {
