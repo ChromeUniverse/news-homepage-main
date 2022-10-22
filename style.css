@@ -25,6 +25,7 @@ body {
 .nav {
   display: flex;
   flex-direction: row;
+  align-items: center;
   justify-content: space-between;
   padding: 50px 0;
 }
@@ -32,7 +33,19 @@ body {
 .nav-links {
   display: flex;
   flex-direction: row;
-  gap: 50px;
+  gap: 50px;  
+}
+
+.cover {
+  display: none;
+}
+
+.nav-links-mobile {
+  display: none;
+}
+
+.nav-menu-open, .nav-menu-close {
+  display: none;
 }
 
 .nav-link {
@@ -59,11 +72,16 @@ body {
   row-gap: 50px;
 }
 
-.hero-image {
+.hero-image-desktop {
+  display: block;
   object-fit: cover;
   width: 100%;
   height: 100%;
   grid-area: hero-image;
+}
+
+.hero-image-mobile {
+  display: none;
 }
 
 .hero-title {
@@ -180,7 +198,6 @@ body {
 .list-article-content {
   display: flex;
   flex-direction: column;
-  height: 100%;
   justify-content: space-between;
 }
 
@@ -207,4 +224,108 @@ body {
 .list-article-text {
   color: var(--dark-grayish-blue);
   line-height: 25px;
+}
+
+@media (max-width: 550px) {
+
+  body {
+    margin: auto;
+    width: 100vw;
+  }
+
+  body.stoned {
+    overflow: hidden;
+  }
+
+  .nav {
+    padding-top: 15px;
+    padding-bottom: 30px;
+    position: relative;
+  }
+
+  .nav-image {
+    width: 50px;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .cover {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgb(0, 0, 0, 0.5);
+    height: 100vh;
+    width: 100vw;
+    transition: all 500ms ease-in-out;
+  }
+
+  .cover.hidden {
+    background-color: rgb(0, 0, 0, 0);
+  }
+
+  .nav-links-mobile {
+    display: flex;
+    top: 0;
+    right: 0;
+    position: fixed;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 30px;
+    height: 100vh;
+    padding: 120px 30px 30px 70px;
+    box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.2);
+    background-color: var(--off-white);
+    transition: all 500ms ease-in-out;
+  }
+
+  .nav-links-mobile.hidden {
+    right: -200px;
+    transition: all 500ms ease-in-out;
+  }
+
+  .nav-menu-open.show {
+    display: block;
+    z-index: 20;
+  }
+
+  .nav-menu-close.show {
+    position: fixed;
+    right: 20px;
+    display: block;
+    z-index: 20;
+  }
+
+  .main {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+  }
+
+  .hero-image-desktop {
+    display: none;
+  }
+
+  .hero-image-mobile {
+    display: block;
+  }
+
+  .hero-title {
+    font-size: 45px;
+    line-height: 45px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  .hero-description-link {
+    margin-top: 30px;
+    margin-bottom: 40px;
+  }  
+  
+  .new {
+    margin-bottom: 45px;
+  }
+
 }

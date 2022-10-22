@@ -16,19 +16,31 @@
 <body>
 
   <nav class="nav">
-    <img src="images/logo.svg" alt="">
-    <div class="nav-links">
+    <img class="nav-image" src="images/logo.svg" alt="">
+    <img id="menu-open-icon" class="nav-menu-open show" src="images/icon-menu.svg" alt="">
+    <img id="menu-close-icon" class="nav-menu-close" src="images/icon-menu-close.svg" alt="">
+    <div id="nav-links" class="nav-links">
       <a class="nav-link" href="/">Home</a>
       <a class="nav-link" href="/">New</a>    
       <a class="nav-link" href="/">Popular</a>
       <a class="nav-link" href="/">Trending</a>
       <a class="nav-link" href="/">Categories</a>
-    </div>    
+    </div>
+    <div id="cover" class="cover hidden"></div>
+    <div id="nav-links-mobile" class="nav-links-mobile hidden">
+      <a class="nav-link" href="/">Home</a>
+      <a class="nav-link" href="/">New</a>    
+      <a class="nav-link" href="/">Popular</a>
+      <a class="nav-link" href="/">Trending</a>
+      <a class="nav-link" href="/">Categories</a>
+    </div>
   </nav>
 
   <main class="main">
 
-    <img class="hero-image" src="images/image-web-3-desktop.jpg" alt="">
+    <img class="hero-image-desktop" src="images/image-web-3-desktop.jpg" alt="">
+
+    <img class="hero-image-mobile" src="images/image-web-3-mobile.jpg" alt="">
 
     <h1 class="hero-title">The Bright Future of Web 3.0?</h1>
 
@@ -101,7 +113,9 @@
         <p class="list-article-text">How the pandemic has sparked fresh opportunities.</p>
       </div>
     </article>
-
   </main>
+
+  <script src="script.js"></script>
+
 </body>
 </html>
